@@ -1,0 +1,7 @@
+body {
+		background: url('../img/background_index.png') center/cover no-repeat fixed;
+}
+
+h1 { 
+	color: violet;
+}

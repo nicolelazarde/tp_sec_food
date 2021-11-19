@@ -1,0 +1,302 @@
+Diseño Web 
+ 
+LISTA DE ATRIBUTOS 
+table
+tr
+td
+url
+ul 
+li
+
+
+ATAJOS: 
+para crear el inicio: ! + tab
+para crear parrafos: p*6 + tab
+para seleccionar: ctrl + clic
+para crear parrafos: Lorem 200 dentro de <p></p>
+tabla o lista desordenada que dentro tiene elementos: ul>li*10
+
+
+Clase: 7/9/19
+
+Tablas 
+<table border="2" align="center">
+	<tr>
+		<td> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td> </td>
+		<td> </td>
+	</tr>
+</table>
+
+Si quiero centrar pongo align="center" dentro de <table>  --> Ejemplo: <table border="2" align="center">
+Para que salgan los bordes pongo borden="2" --> Ejemplo: <table border="2">
+En vez de td puedo poner th --> para que centre y ponga en negrita. 
+EJEMPLO: 
+	<tr>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+rowspan --> union de fila    --> Ejemplo: <td rowspan="3"> Año </td>
+<table border="2" align="center">
+	<tr>
+		<td rowspan="3"> Numeros </td>
+		<td> 5</td>
+	</tr>
+	<tr>
+		<td> 3</td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+	</tr>
+</table>
+Para escribirlo se piensa de izquierda a derecho, se cuenta siempre desde donde comienza. Si son dos filas una de 3 columnas y otra de una, 
+el primer td que se coloca es de dos el primero que tiene la columna normal y el otro el rowspan. 
+
+
+colspan --> union de columna --> Ejemplo: <td colspan="2"> Año </td>
+Sirve para crear filas con las mismas columnas pero que valen por el valor que le coloquemos 
+- se puede colocar tablas dentro de tablas 
+- se colocan una tabla de 6 y pongo en cada td colspan para que se vea mas grande 
+- se puede colocar solo en los espacios que necesitas que esten unidos, lo malo es que los cuadritos pueden quedar muy pequeños
+
+Tablas dentro de otras tablas 
+<table border="2" align="center">
+	<tr>
+	<td colspan="2"> 
+		<table>
+		<tr>
+			<td> </td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td> </td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+
+	<tr>
+	<td> </td>
+	<td> </td>
+	</tr>
+</table>
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CSS3
+
+
+- inline 
+<!-- agrego estilo solo a un parrafo en particular-->
+<p style="color: blue; front-family: helvetica;"> Dame estilo </p>
+
+NOTA: Esto es solo para una etiqueta pero para hacerlo con varias palabras no es comodo. 
+
+- aplicado a todo el archivo
+<!-- agrego estilo a todo el documento-->
+<head>
+	<style>
+		p{
+		color: red; 
+		font-family: helvatica;
+		}
+	</style>
+</head>
+
+NOTA: siempre para cerrar un parrafo ponemos ; 
+
+- externo (varios archivos)
+<!-- agrego estilo a todo el documento desde css externo>
+
+<link rel="stylesheet" type="text/css" href="main.css">
+
+Ejemplo:
+	p{
+		color: red; 
+		font-family: helvatica;
+	}
+	h1{
+		color: green;
+		text-align: center; 
+
+	}
+
+Para vincular... se vincula el archivo de CSS en el archivo de HTML 
+En el trabajo vamos a usar este css externo
+
+- id
+<p id="sinestilo"> </p>
+
+y para buscarlo en css pongo #sinestilo 
+
+- comentarios 
+/* Comentario*/
+
+- estilo de letra 
+p{
+	font-family: helvetica; 
+	font-weigth: bold; 
+	NOTA: (bold, normal, negrita, 100, 200, 300... etc hasta 900 - depende de lo que la letra pueda soportar)
+	font-size:28px; 
+	NOTA: (es el tamaño, los pixeles ó tamaños relativos: pueden ser porcentajes, em que es una unidad estandarizada de la letra m, es decir si pones 2em es un multiplicador y se escribe junto)
+	font-style; italic; 
+	NOTA: (si es normal no es necesario colocarlo)
+}
+
+	font-family: helvetica; NOTA: (es el tipo de letra que puedo o redireccionarlo a la pag o puedo descargarlo)
+	font-weigth: bold; NOTA: (bold, normal, negrita, 100, 200, 300... etc hasta 900 - depende de lo que la letra pueda soportar)
+	font-size:28px; NOTA: (es el tamaño, los pixeles ó tamaños relativos: pueden ser porcentajes, em que es una unidad estandarizada de la letra m, es decir si pones 2em es un multiplicador y se escribe junto)
+	font-style; italic; NOTA: (si es normal no es necesario colocarlo)
+
+ó
+
+p{
+	font: italic bold 36px helvetica; 
+}
+
+- colores 
+Tipos de escritura, Solo afecta a las letras
+1. nombre 
+2. codigo
+3. rgb
+4. rgba
+
+p{
+	font: italic bold 36px helvetica; 
+	color: blue;
+
+}
+
+p{
+	font: italic bold 36px helvetica; 
+	color: #fa1c36;
+
+}
+
+p{
+	font: italic bold 36px helvetica; 
+	color: rgb (245,55,76);	
+}
+
+p{
+	font: italic bold 36px helvetica; 
+	color: rgba (245,55,76,0.5);
+}
+
+
+- colores de fondos ó background colors
+
+p{
+	background-colors: violet
+}
+
+
+- imagen de fondo
+
+body{
+	
+	background-image: url('dentro pongo la carpeta');
+	NOTA: si quiero que vuelva atras de la carpeta donde estaba pongo dos puntos asi --> ..
+	background-size: 600px 400px ó cover
+	NOTA: el tamaño que quiero que tenga la imagen. Si pongo cover se ve en toda la pantalla pero se estira la imagen y no ta bueno --> para solucionarlo le ponemos un background-repeat: notrepeat y tambien un background-attachment:fixed  y si quiero que este centrada pongo background-position: center
+	background-repeat: notrepeat --> si no quiero que repita  y si quiero que repita pongo repeat-x o repeat-y (si quiero que se repita en el eje x o y)
+	background-position: center; 
+	NOTA: dependiendo donde quiero que se vea la imagen. ejemplo: si pongo esto se va a ver centrada y sola esa imagen
+
+}
+
+- link (para cambiar el color cuando coloque la flechita encima de la palabra)
+a{
+	color: white;
+	font-size: 50px;
+	text-decoreation: none;
+}
+
+a:hover{
+	color:red;
+}
+
+.link
+<a class="link1" href=""> link con estilo </a>
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Clase 14 de septiembre de 2019
+
+continuación de css
+
+ID
+si yo tengo dos parrafos y le quiero dar un color a los dos. 
+pongo: 
+p{
+color:red;
+}
+
+pero si quiero darle colores diferentes a cada uno. 
+Entonces para poder separarlo o discriminarlo: 
+1) pongo un identificador, Cuando quiero hacer un unico parrafo que sea diferente. 
+EJEMPLO: <p id: ''colorRosa''> Hola <p>
+
+Para llamarlo pongo: 
+#colorRosa{
+colorpink;
+}
+
+2)Clases, permiten colocarse mas de una vez. 
+
+ejemplo:<p class="colorRosa">hola<p>
+
+Para llamarlo pongo en CSS
+.colorRosa{
+colorpink;
+}
+
+para separar las clases solo pongo espacio OJO
+
+HIPERVINCULOS 
+
+<a href="" class="boton">productos</a>
+en CSS pongo
+.boton{
+	text-decoration: none; 
+	color: black;
+	background.color: ligtblue;
+	padding:15px;
+	border: 2px solid blue;
+	border-radius: 5px;
+
+}
+none: permite quitar la rella
+padding: es un margen interno, se coloca con px
+borde: se le pone en px el tamaño + estilo de borde (solid, dashed, dotted, outset, inset) + color de borde
+border-radius: es para que redonde los bordes
+
+a{
+	color:black;
+}
+
+SE PUEDE APLICAR A TODO 
+a:hover{
+	color:pink
+}
+
+--> para hacer que cuando piso el boton cambien de color la letras por ejemplo
+
+a: active{
+
+}
+--> sirve para cuando uno hace click encima del boton. 
+para que tenga el efecto de que se unde tenemos que darle SOMBREADO
+
+
+
+
+
+
+

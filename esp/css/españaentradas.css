@@ -1,0 +1,64 @@
+body {
+		background-color: rgba(146, 131, 131, 0.35);
+}
+
+/*TAMAÑO DE FUENTES*/
+
+.tfuente1 {
+		font-size: 130%;
+}
+
+/*TAMAÑO DE FUENTES*/
+
+/*SOBRAS EN TEXTOS*/
+
+.sombratexto {
+		text-shadow: 2px 2px 2px rgb( 109, 103, 103);
+}
+
+/*SOBRAS EN TEXTOS*/
+ul { 
+	list-stile: url("img/iconCubiertos.png");
+}
+
+h1 {
+	background-color: rgba(142, 96, 96, 0.50);
+	font-family: 'Mansalva', cursive;
+}
+img {
+	
+}
+img:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(142, 96, 96, 0.90);
+}
+
+.estilogoogle {
+		font-family: 'Mansalva', cursive;	
+}
+
+.estilogoogle1 {
+		font-family: 'Satisfy', cursive;
+}
+ .inclinado {
+ 		border-radius: 40px; margin-left: 40px; transform:  skewY(-20deg);
+ }
+
+
+.boton {
+	text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    /*color: black;*/
+    color: rgba(  239, 229, 229);
+    /*color: #ffffff;*/
+    background-color: rgba( 50, 12, 12, 0.70);
+    border-radius: 6px;
+    border: 2px solid black;
+}
+.boton:hover {
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(142, 96, 96, 0.90);
+	color: black;
+    background-color: rgba(142, 96, 96, 0.90);
+}
+
